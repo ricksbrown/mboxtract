@@ -65,7 +65,7 @@ function instantiateMbox(outputDir, dryRun, subDirs) {
 
 		mailParser.on("data", function (data) {
 			var myFile, fileToWrite;
-			if (data.type === "attachment") {
+			if (data.type === "attachment" && data.filename) {
 				fileToWrite = path.join(currentDir, data.filename);
 				console.log(data.filename);
 				if (!dryRun) {
