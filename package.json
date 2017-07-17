@@ -1,10 +1,10 @@
 {
 	"name": "mboxtract",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"repository": "https://github.com/ricksbrown/mboxtract.git",
 	"description": "Extracts all attachments from large MBOX files",
 	"main": "index.js",
-	"bin" : {
+	"bin": {
 		"mboxtract": "./mboxtract.js"
 	},
 	"scripts": {
