@@ -66,8 +66,12 @@ function instantiateMbox(outputDir, dryRun, subDirs) {
 		mailParser.on("data", function (data) {
 			var myFile, fileToWrite;
 			if (data.type === "attachment" && data.filename) {
-				fileToWrite = path.join(currentDir, data.filename);
-				console.log(data.filename);
+				var filename = data.filename;
+				if (process.platform != "win32") {
+					filename = filename.replace(/\//g, "-");
+				}
+				fileToWrite = path.join(currentDir, filename);
+				console.log(filename);
 				if (!dryRun) {
 					myFile = fs.createWriteStream(fileToWrite);
 					data.content.pipe(myFile);
