@@ -18,8 +18,8 @@
 	"author": "ricksbrown73@gmail.com",
 	"license": "MIT",
 	"dependencies": {
-		"mailparser": "2.7.1",
-		"minimist": "1.2.0",
+		"mailparser": "^3.7.2",
+		"minimist": "^1.2.8",
 		"node-mbox": "1.0.0"
 	}
 }
